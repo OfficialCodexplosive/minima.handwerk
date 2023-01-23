@@ -52,6 +52,52 @@ get_header();
                 </div>
             </div>
         </section>
+        <section id="how-it-works">
+            <div class="center horizontal fullwidth">
+                <div class="header">
+                    <h3>SO FUNKTIONIERT'S</h3>
+                    <h1 class="boldq black">ZUVERLÄSSIG & UNKOMPLIZIERT</h3>
+                </div>
+                <div class="content">
+                    <table>
+                        <colgroup>
+                            <col style="width:25%">
+                            <col style="width:50%">
+                            <col style="width:25%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>Besichtigung</td>
+                                <td>einfach anrufen oder unseren Online-Terminplaner verwenden und einen Besichtigungstermin ausmachen.</td>
+                                <td><a href="">ZUM KONTAKT</a></td>
+                            </tr>
+                            <tr>
+                                <td>Angebot</td>
+                                <td>einfach anrufen oder unseren Online-Terminplaner verwenden und einen Besichtigungstermin ausmachen.</td>
+                                <td><a href="">ZUM KONTAKT</a></td>
+                            </tr>
+                            <tr>
+                                <td>Entrümpelung</td>
+                                <td>einfach anrufen oder unseren Online-Terminplaner verwenden und einen Besichtigungstermin ausmachen.</td>
+                                <td><a href="">ZUM KONTAKT</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="before-after">
+            <div id="fullsize-img"></div>
+            <div class="center fullwidth">
+                <div class="header">
+                    <h3>VORHER - NACHHER</h3>
+                    <h1 class="boldq white">ÜBERZEUGEN SIE SICH<br>SELBST VON UNSERER ARBEIT!</h3>
+                </div>
+                <div class="content">
+                    <a href="#">ZUR BILDERSTRECKE</a>
+                </div>
+            </div>
+        </section>
         <!--
 		< ?php
 		if ( have_posts() ) :

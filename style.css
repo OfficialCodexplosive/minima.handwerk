@@ -488,7 +488,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: var(--color-white);
+	background: url("./img/dot-square-pattern-transp-bg.svg"), var(--color-white);
 	margin: 0 12.5%;
 }
 
@@ -1034,19 +1034,20 @@ textarea {
 
 /* Landing
 --------------------------------------------- */
-#landing, #services
+#landing, #services, #how-it-works, #before-after
 {
 	display: flex;
 	height: 100vh;
 	width: 100%;
+	color: var(--color-green-dark);
 }
 
-section#services
+section#services, section#how-it-works, section#before-after
 {
 	padding: 8.45% 0 15.1% 0;
 }
 
-#landing
+#landing, #before-after
 {
 	color: var(--color-white);
 }
@@ -1068,6 +1069,20 @@ section#services
 	z-index: -1;
 }
 
+#before-after
+{
+	position: relative;
+}
+
+#before-after #fullsize-img
+{
+	background: linear-gradient(150deg, rgba(var(--color-green-dark-values), 0.86), rgba(var(--color-green-dark-values), 0)), linear-gradient(0, rgba(var(--color-green-dark-values), 0.38), rgba(var(--color-green-dark-values), 0.38)), url("./img/references/20230117-hoarding-gigapixel-low_res-scale-4_00x_blur.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: translateX(-12.5%);
+}
+
 .boldq
 {
 	-webkit-text-stroke-width: 3px;
@@ -1083,7 +1098,7 @@ section#services
 	-webkit-text-stroke-color: var(--color-green-dark);
 }
 
-#landing .center
+#landing .center, #before-after .center
 {
 	font-family: "Questrial";
 	font-size: 93pt;
@@ -1091,7 +1106,7 @@ section#services
 	
 }
 
-#landing .center #small
+#landing .center #small, #before-after .center #small
 {
 	font-size: 46pt;
 	line-height: 170%;
@@ -1230,6 +1245,74 @@ section .slide h1
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
 
+#how-it-works
+{
+
+}
+
+#how-it-works .content table
+{
+	margin-top: 14%;
+}
+
+#how-it-works .content table
+{
+	border-collapse: collapse;
+}
+
+#how-it-works .content table tr
+{
+	border-color: var(--color-green-dark);
+	border-bottom: 1px solid;
+}
+
+#how-it-works .content table tr:first-of-type
+{
+	border-top: 1px solid;
+}
+
+#how-it-works .content table td
+{
+	text-align: left;
+	font-size: 16pt;
+	vertical-align: middle;
+	padding: 5% 0;
+}
+
+#how-it-works .content table tr td:first-of-type
+{
+	font-family: 'Darker Grotesque';
+	font-size: 40pt;
+	font-weight: 600;
+}
+
+#how-it-works .content table tr td:nth-of-type(2)
+{
+	line-height: 1.6;
+	padding: 0 3%;
+}
+
+#how-it-works .content table tr td:last-of-type
+{
+	text-align: right;
+	color: var(--color-green-desaturated);
+	-webkit-text-stroke-width: .6px;
+}
+
+#how-it-works .content table tr td:last-of-type a
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+#how-it-works .content table tr td:last-of-type a::after
+{
+	content: url("./img/mmf_arrow.svg");
+	width: 2em;
+	height: 2em;
+	margin-left: .5em;
+}
+
 /* WebKit */
 #services .slides-container::-webkit-scrollbar { 
     width: 0;
@@ -1277,4 +1360,33 @@ section .slide h1
 .slide.invisible
 {
 	visibility: hidden;
+}
+
+
+#before-after .center
+{
+	line-height: 1;
+	padding: 5% 0;
+}
+
+#before-after .center .content
+{
+	padding-top: 5%;
+}
+
+#before-after .center .content a
+{
+	
+	font-size: 16pt;
+	color: var(--color-white);
+}
+
+#before-after .content a::after
+{
+	content: url("./img/mmf_arrow.svg");
+	width: 2em;
+	height: 2em;
+	margin-left: .5em;
+
+	filter: brightness(0) saturate(100%) invert(87%) sepia(1%) saturate(609%) hue-rotate(81deg) brightness(114%) contrast(95%)
 }
