@@ -4,7 +4,7 @@ const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
 //const statsButton = document.getElementById("stats");
 
-const clientWidthScalar = 1.49;
+const clientWidthScalar = 1.67;
 
 const slides = document.querySelectorAll(".slide");
 

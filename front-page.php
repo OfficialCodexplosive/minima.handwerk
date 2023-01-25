@@ -40,7 +40,9 @@ get_header();
                                 </li>
                                 <li class="slide">
                                     <h1 class="boldq black">ENTRÜMPELUNG</h1>
-                                    <div class="slide-img"></div>
+                                    <div class="slide-img">
+                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/references/AdobeStock_142528535.jpeg"/>
+                                    </div>
                                 </li>
                                 <li class="slide">
                                     <h1 class="boldq black">HAUSAUFLÖSUNG</h1>
@@ -95,6 +97,23 @@ get_header();
                 </div>
                 <div class="content">
                     <a href="#">ZUR BILDERSTRECKE</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div id="fullsize-img"></div>
+            <div class="center horizontal fullwidth">
+                <div class="header">
+                    <h3>KONTAKT</h3>
+                    <h1 class="boldq white">NOCH FRAGEN?</h3>
+                </div>
+                <div class="content">
+                    <h2>Kontaktieren Sie uns!</h2>
+                    <h4 class="boldq white">+49 221 47-10-4146</h4>
+                    <div class="links">
+                        <a href="#">E-MAIL SCHREIBEN</a>
+                        <a href="#">KONTAKTFORMULAR</a>
+                    </div>
                 </div>
             </div>
         </section>
