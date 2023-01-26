@@ -19,7 +19,8 @@ get_header();
         <section id="landing">
             <div id="fullsize-img"></div>
             <div class="center vertical horizontal fullwidth">
-                <p class="boldq white">ENTRÜMPELUNG<br><span id="small">- & -</span><br>HAUSHALTSAUFLÖSUNG</p>
+                <p class="boldq white large-disp">ENTRÜMPELUNG<br><span id="small">- & -</span><br>HAUSHALTSAUFLÖSUNG</p>
+                <p class="boldq white small-disp">ENTRÜMPELUNG<span id="small">&</span><br>HAUSHALTSAUF-<br>LÖSUNG</p>
             </div>
         </section>
         <section id="services">

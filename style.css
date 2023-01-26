@@ -79,8 +79,33 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--color-green-dark-values: 34,40,35;
 	--color-green-light: #78e08f;
 	--color-green-desaturated: #a8d4b2;
+
+	--text-small: 12pt;
+	--text-regular: 16pt;
+	--text-button: var(--text-regular);
+	--text-medium: 20pt;
+	--text-nav-logo: 35pt;
+	--text-medium-large: 40pt;
+	--text-landing-small: 46pt;
+	--text-large: 64pt;
+	--text-landing: 93pt;
+	--text-contact: 115pt;
+	--margin-horizontal: 12.5%;
+
+	--stroke-footer: 1.5px;
+	--stroke-main: 3px;
+	--stroke-table-link: .6px;
 }
 
+.large-disp
+{
+	display: block;
+}
+
+.small-disp
+{
+	display: none;
+}
 
 /**
  * 1. Correct the line height in all browsers.
@@ -119,10 +144,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
 
 /* Grouping content
 	 ========================================================================== */
@@ -131,20 +152,11 @@ h1 {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-pre {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
 
 /* Text-level semantics
 	 ========================================================================== */
@@ -156,15 +168,6 @@ a {
 	background-color: transparent;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-	border-bottom: none;
-	text-decoration: underline;
-	text-decoration: underline dotted;
-}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -172,17 +175,6 @@ abbr[title] {
 b,
 strong {
 	font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
 }
 
 /**
@@ -287,35 +279,6 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
 	outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-	padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
- */
-legend {
-	box-sizing: border-box;
-	color: inherit;
-	display: table;
-	max-width: 100%;
-	padding: 0;
-	white-space: normal;
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-	vertical-align: baseline;
 }
 
 /**
@@ -502,41 +465,8 @@ big {
 --------------------------------------------- */
 body {
 	background: url("./img/dot-square-pattern-transp-bg.svg"), var(--color-white);
-	margin: 0 12.5%;
-}
-
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
-
-ul,
-ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
-
-dt {
-	font-weight: 700;
-}
-
-dd {
-	margin: 0 1.5em 1.5em;
+	background-size: 30%;
+	margin: 0 var(--margin-horizontal);
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -558,25 +488,6 @@ figure {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
-}
-
-/* Links
---------------------------------------------- */
-a {
-	color: #4169e1;
-}
-
-a:visited {
-	color: #800080;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
 }
 
 /* Forms
@@ -678,7 +589,7 @@ textarea {
 	left: 0;
 	right: 0;
 	top: 0;
-	margin: 1.25% 12.5% 0 12.5%;
+	margin: 2% var(--margin-horizontal) 0 var(--margin-horizontal);
 }
 
 .main-navigation {
@@ -702,7 +613,7 @@ textarea {
 	white-space: nowrap;
 	font-family: "Quicksand";
 	font-weight: 500;
-	font-size: 12pt;
+	font-size: var(--text-small);
 }
 
 .main-navigation ul li a
@@ -713,13 +624,13 @@ textarea {
 .main-navigation ul li:nth-of-type(3) {
 	flex: 5;
 	
-	font-size: 35pt;
+	/*font-size: var(--text-nav-logo);
 	height: 2em;
 
 	text-transform: uppercase;
 	background-image: url("./img/bordahn_logo.svg");
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 	text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -769,21 +680,6 @@ textarea {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
 
 .site-main .comment-navigation,
 .site-main
@@ -1103,7 +999,7 @@ section#before-after
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform: translateX(-12.5%);
+	transform: translateX(calc(-1 * var(--margin-horizontal)));
 }
 
 #contact
@@ -1117,7 +1013,7 @@ section#before-after
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform: translateX(-12.5%);
+	transform: translateX(calc(-1 * var(--margin-horizontal)));
 	height: calc(100vh + 10%);
 }
 
@@ -1130,18 +1026,18 @@ section#before-after
 {
 	color: var(--color-green-desaturated);
 	font-family: 'Maytra';
-	font-size: 115pt;
+	font-size: var(--text-contact);
 }
 
 #contact .content h4
 {
 	font-family: 'Questrial';
-	font-size: 64pt;
+	font-size: var(--text-large);
 }
 
 .boldq
 {
-	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-width: var(--stroke-main);
 }
 
 .boldq.white
@@ -1157,14 +1053,14 @@ section#before-after
 #landing .center, #before-after .center
 {
 	font-family: "Questrial";
-	font-size: 93pt;
+	font-size: var(--text-landing);
 	line-height: 40%;
 	
 }
 
 #landing .center #small, #before-after .center #small
 {
-	font-size: 46pt;
+	font-size: var(--text-landing-small);
 	line-height: 170%;
 }
 
@@ -1205,13 +1101,13 @@ section h1, section h3
 section h1
 {
 	margin-top: .1em;
-	font-size: 64pt;
+	font-size: var(--text-large);
 }
 
 section h3
 {
 	margin-bottom: 2em;
-	font-size: 16pt;
+	font-size: var(--text-regular);
 }
 
 section .header
@@ -1232,7 +1128,7 @@ section .content
   	position: relative;
 	width: 100vw;
 	height: unset;
-	transform: translateX(-12.5%);
+	transform: translateX(calc(-1 * var(--margin-horizontal)));
 }
   
 #services .slides-container
@@ -1333,7 +1229,7 @@ section .slide h1
 #how-it-works .content table td
 {
 	text-align: left;
-	font-size: 16pt;
+	font-size: var(--text-regular);
 	vertical-align: middle;
 	padding: 5% 0;
 }
@@ -1341,7 +1237,7 @@ section .slide h1
 #how-it-works .content table tr td:first-of-type
 {
 	font-family: 'Darker Grotesque';
-	font-size: 40pt;
+	font-size: var(--text-medium-large);
 	font-weight: 600;
 }
 
@@ -1355,13 +1251,14 @@ section .slide h1
 {
 	text-align: right;
 	color: var(--color-green-desaturated);
-	-webkit-text-stroke-width: .6px;
+	-webkit-text-stroke-width: var(--stroke-table-link);
 }
 
 #how-it-works .content table tr td:last-of-type a
 {
 	color: inherit;
 	text-decoration: none;
+	font-size: var(--text-button);
 }
 
 #how-it-works .content table tr td:last-of-type a::after
@@ -1411,7 +1308,7 @@ section .slide h1
   
 #slide-arrow-next
 {
-  	right: .75rem;
+  	right: 0;
   	padding-left: 0.75rem;
   	border-radius: 2rem 0 0 2rem;
 }  
@@ -1431,6 +1328,7 @@ section .slide h1
 #before-after .center .content
 {
 	padding-top: 5%;
+	flex: 1 0 40%;
 }
 
 #contact .content
@@ -1459,7 +1357,7 @@ section .slide h1
 #before-after .center .content a, #contact .content .links a
 {
 	
-	font-size: 16pt;
+	font-size: var(--text-button);
 	color: var(--color-white);
 	text-underline-offset: .3em;
 }
@@ -1479,7 +1377,7 @@ footer
 {
 	color: var(--color-white);
 	font-family: "Quicksand";
-	font-size: 16pt;
+	font-size: var(--text-regular);
 	margin-top: -6vh;
 	position: relative;
 	margin-top: -3vh;
@@ -1496,14 +1394,14 @@ footer a
 footer h5
 {
 	font-family: "Questrial";
-	font-size: 20pt;
-	-webkit-text-stroke-width: 1.5px;
+	font-size: var(--text-medium);
+	-webkit-text-stroke-width: var(--stroke-footer);
 }
 
 footer .scheduler
 {
 	position: relative;
-	font-size: 20pt;
+	font-size: var(--text-medium);
 }
 
 .site-footer
@@ -1634,7 +1532,7 @@ footer .scheduler
     left: 100%;
 }
 
-.logo
+.logo, .main-navigation ul li:nth-of-type(3)
 {
 	width: 16em;
 	height: 3em;
@@ -1650,6 +1548,132 @@ footer #fullsize-img
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform: translateX(-12.5%);
+	transform: translateX(calc(-1 * var(--margin-horizontal)));
 	height: 100%;
+}
+
+@media only screen and (max-width: 600px)
+{
+	:root
+	{
+		--text-small: 8pt;
+		--text-regular: 12pt;
+		--text-button: 8pt;
+		--text-medium: 10pt;
+		--text-nav-logo: 16pt;
+		--text-medium-large: 24pt;
+		--text-landing-small: 16pt;
+		--text-large: 24pt;
+		--text-landing: 30pt;
+		--text-contact: 38pt;
+		--margin-horizontal: 6%;
+
+		--stroke-footer: 1px;
+		--stroke-main: 1.75px;
+		--stroke-table-link: .6px;
+	}
+
+	.large-disp
+	{
+		display: none;
+	}
+
+	.small-disp
+	{
+		display: block;
+		line-height: .9;
+		text-align: left;
+	}
+
+	#landing .center .small-disp #small
+	{
+		line-height: .9;
+		margin-left: .5ch;
+	}
+
+	.site-header .main-navigation
+	{
+		display: none;
+	}
+
+	#fullsize-img
+	{
+		background-image: linear-gradient(0deg, rgba(var(--color-green-dark-values), 0.344), rgba(var(--color-green-dark-values), 0.344)), url("./img/references/AdobeStock_39967774_upextended.png");
+	}
+}
+
+@media only screen and (min-width: 600px)
+{
+	:root
+	{
+		--text-small: 8pt;
+		--text-regular: 10pt;
+		--text-medium: 12pt;
+		--text-nav-logo: 16pt;
+		--text-medium-large: 20pt;
+		--text-landing-small: calc(var(--text-landing)/2);
+		--text-large: 24pt;
+		--text-landing: 32pt;
+		--text-contact: 48pt;
+		--margin-horizontal: 3%;
+
+		--stroke-footer: 1px;
+		--stroke-main: 2px;
+		--stroke-table-link: .6px;
+	}
+}
+
+@media only screen and (min-width: 768px)
+{
+	:root
+	{
+		--text-small: 10pt;
+		--text-regular: 12pt;
+		--text-medium: 14pt;
+		--text-nav-logo: 16pt;
+		--text-medium-large: 28pt;
+		--text-landing-small: calc(var(--text-landing)/2);
+		--text-large: 40pt;
+		--text-landing: 40pt;
+		--text-contact: 64pt;
+		--margin-horizontal: 3%;
+
+		--stroke-footer: 1px;
+		--stroke-main: 2px;
+		--stroke-table-link: .6px;
+	}
+}
+
+@media only screen and (min-width: 992px) 
+{
+	:root
+	{
+		--text-small: 12pt;
+		--text-regular: 12pt;
+		--text-medium: 16pt;
+		--text-nav-logo: 35pt;
+		--text-medium-large: 32pt;
+		--text-landing-small: calc(var(--text-landing)/2);
+		--text-large: 48pt;
+		--text-landing: 48pt;
+		--text-contact: 88pt;
+		--margin-horizontal: 6.25%;
+	}
+}
+
+@media only screen and (min-width: 1200px) 
+{
+	:root
+	{
+		--text-small: 12pt;
+		--text-regular: 16pt;
+		--text-medium: 20pt;
+		--text-nav-logo: 35pt;
+		--text-medium-large: 40pt;
+		--text-landing-small: 46pt;
+		--text-large: 64pt;
+		--text-landing: 93pt;
+		--text-contact: 115pt;
+		--margin-horizontal: 12.5%;
+	}
 }
