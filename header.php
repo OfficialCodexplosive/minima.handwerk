@@ -35,5 +35,10 @@
 				)
 			);
 			?>
+			<div class="short-logo">G. BORDAHN</div>
+			<button class="togglebtn" onclick="toggleNav()"></button>
 		</nav><!-- #site-navigation -->
+		<div id="replacement-header">
+			<a href="#"><span>ZUM<br>TERMIN-<br>PLANER</span></a>
+		</div>
 	</header><!-- #masthead -->

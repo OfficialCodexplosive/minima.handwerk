@@ -102,7 +102,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	display: block;
 }
 
-.small-disp
+.short-logo, .togglebtn, #replacement-header, .small-disp
 {
 	display: none;
 }
@@ -1566,11 +1566,13 @@ footer #fullsize-img
 		--text-large: 24pt;
 		--text-landing: 30pt;
 		--text-contact: 38pt;
-		--margin-horizontal: 6%;
+		--margin-horizontal: 6vw;
 
 		--stroke-footer: 1px;
 		--stroke-main: 1.75px;
 		--stroke-table-link: .6px;
+
+		--nav-top-margin: 6.6vh;
 	}
 
 	.large-disp
@@ -1591,14 +1593,175 @@ footer #fullsize-img
 		margin-left: .5ch;
 	}
 
-	.site-header .main-navigation
+	.site-header .main-navigation .menu-header-container
+	{
+		height: 100%;
+		width: 0;
+		background: url('./img/menu-pattern.svg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		overflow-x: hidden;
+		transition: 0.5s;
+		left: 0;
+		padding-top: calc(var(--nav-top-margin) + 25%);
+	}
+
+	.site-header .main-navigation .menu-header-container, .togglebtn, .short-logo
+	{
+		position: fixed;
+		z-index: 2;
+		top: 0;
+	}
+
+	.menu-header-container ul
+	{
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 var(--margin-horizontal);
+	}
+
+	.site-header .main-navigation .menu-header-container li
+	{
+		text-decoration: none;
+		font-size: 25px;
+		display: block;
+		text-align: left;
+		width: 100%;
+	}
+
+	.site-header .main-navigation .menu-header-container li a
+	{
+		padding: 1em 0;
+	}
+
+	.site-header .main-navigation .menu-header-container li:not(:last-of-type)::after
+	{
+		display: block;
+		position: absolute;
+		width: calc(100vw - 2 * var(--margin-horizontal));
+		height: 1px;
+		background-color: var(--color-green-dark);
+		content: '';
+	}
+
+	.site-header .main-navigation .menu-header-container li a
+	{
+		color: var(--color-green-dark);
+		transition: 0.3s;
+	}
+
+	.site-header .main-navigation .menu-header-container li:nth-of-type(3)
 	{
 		display: none;
+	}
+
+	.site-header .main-navigation ul li:hover a
+	{
+		transform: translateX(5vw);
+	}
+
+	.togglebtn 
+	{
+		font-size: var(--text-nav-logo);
+		width: .8em;
+		height: .8em;
+		background: none;
+		cursor: pointer;
+		border: none;
+		z-index: 3;
+		right: var(--margin-horizontal);
+		top: var(--nav-top-margin);
+		padding: 0;
+		margin: 0;
+		background-image: url('./img/modern-hamburger.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 0;
+		transition: .3s;
+		opacity: 1;
+	}
+
+	.togglebtn.active
+	{
+		filter: brightness(0) saturate(100%) invert(13%) sepia(26%) saturate(232%) hue-rotate(79deg) brightness(91%) contrast(94%);
+		background-image: url('./img/modern-hamburger-close.svg');
+		
 	}
 
 	#fullsize-img
 	{
 		background-image: linear-gradient(0deg, rgba(var(--color-green-dark-values), 0.344), rgba(var(--color-green-dark-values), 0.344)), url("./img/references/AdobeStock_39967774_upextended.png");
+	}
+
+	#landing, #fullsize-img
+	{
+		height: 75vh;
+	}
+
+	.short-logo
+	{
+		display: block;
+		font-family: "Syne";
+		font-size: var(--text-nav-logo);
+		font-weight: 700;
+		top: var(--nav-top-margin);
+		left: var(--margin-horizontal);
+		color: var(--color-white);
+		z-index: 3;
+		transition: .3s;
+		opacity: 1;
+	}
+
+	.short-logo.active
+	{
+		color: var(--color-green-dark);
+	}
+
+	.main-navigation.fixed .short-logo, .main-navigation.fixed .togglebtn
+	{
+		opacity: 0;
+	}
+
+	#replacement-header
+	{
+		bottom: -6vh;
+		left: 0;
+		position: fixed;
+		display: flex;
+		width: 100vw;
+		height: 6vh;
+		background-color: var(--color-green-dark);
+		color: var(--color-green-dark);
+		z-index: 5;
+		justify-content:right;
+		transition: .5s;
+	}
+
+	#replacement-header a
+	{
+		background-color: var(--color-green-desaturated);
+		color: inherit;
+		text-decoration: none;
+		font-family: "Quicksand";
+		width: 6vh;
+		height: 6vh;
+		line-height: 4vh;
+		font-size: 6pt;
+		padding: calc(6vh * .18);
+	}
+
+	#replacement-header a span
+	{
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+	}
+
+	#replacement-header.show
+	{
+		bottom: 0;
 	}
 }
 

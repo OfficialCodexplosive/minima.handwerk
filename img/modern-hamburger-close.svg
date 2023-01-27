@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="4.6282687mm"
+   height="4.0558305mm"
+   viewBox="0 0 4.6282687 4.0558305"
+   version="1.1"
+   id="svg787"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="modern-hamburger-close.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview789"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="9.5144352"
+     inkscape:cx="30.690209"
+     inkscape:cy="19.549242"
+     inkscape:window-width="5120"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g32794" />
+  <defs
+     id="defs784" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-147.44434,142.97707)">
+    <g
+       id="g32794"
+       inkscape:label="hamburger"
+       transform="translate(335.82247,37.570067)">
+      <rect
+         style="opacity:1;fill:#f5f8f6;fill-opacity:1;stroke-width:1.46686;stroke-linejoin:round;stroke-dasharray:none"
+         id="rect32446"
+         width="4.628264"
+         height="0.70056003"
+         x="-260.1134"
+         y="4.9846854"
+         transform="rotate(45)" />
+      <rect
+         style="opacity:1;fill:#f5f8f6;fill-opacity:1;stroke-width:1.46686;stroke-linejoin:round;stroke-dasharray:none"
+         id="rect32728"
+         width="4.628264"
+         height="0.70056003"
+         x="-7.6490955"
+         y="-258.14954"
+         transform="rotate(-45)" />
+    </g>
+  </g>
+</svg>
