@@ -37,17 +37,21 @@ get_header();
                                 <li class="slide invisible" style="background: orange;"></li>
                                 <li class="slide">
                                     <h1 class="boldq black">GARTENARBEIT</h1>
-                                    <div class="slide-img"></div>
+                                    <div class="slide-img">
+                                        <img/>
+                                    </div>
                                 </li>
                                 <li class="slide">
                                     <h1 class="boldq black">ENTRÜMPELUNG</h1>
                                     <div class="slide-img">
-                                        <img src="<?php echo get_bloginfo('template_url') ?>/img/references/AdobeStock_142528535.jpeg"/>
+                                        <img/>
                                     </div>
                                 </li>
                                 <li class="slide">
                                     <h1 class="boldq black">HAUSAUFLÖSUNG</h1>
-                                    <div class="slide-img"></div>
+                                    <div class="slide-img">
+                                        <img/>
+                                    </div>
                                 </li>
                                 <li class="slide invisible" style="background: orange;"></li>
                         </ul>
@@ -64,15 +68,16 @@ get_header();
                 <div class="content">
                     <table>
                         <colgroup>
-                            <col style="width:25%">
-                            <col style="width:50%">
-                            <col style="width:25%">
+                            <col>
+                            <col>
+                            <col>
                         </colgroup>
                         <tbody>
                             <tr>
                                 <td>Besichtigung</td>
                                 <td>einfach anrufen oder unseren Online-Terminplaner verwenden und einen Besichtigungstermin ausmachen.</td>
                                 <td><a href="">ZUM KONTAKT</a></td>
+                                
                             </tr>
                             <tr>
                                 <td>Angebot</td>
@@ -155,5 +160,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

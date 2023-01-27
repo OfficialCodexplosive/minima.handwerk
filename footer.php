@@ -14,7 +14,8 @@
 	<footer id="colophon" class="site-footer">
 		<div id="fullsize-img"></div>
 		<div class="footer-separation">
-			<div class="line"><span><div class="logo"></div></span></div>
+			<div class="line"></div>
+			<div class="logo"></div>
 		</div>
 		<div class="page-footer">
 			<div class="nav">
@@ -36,28 +37,32 @@
 				<ul>
 					<li><a href="#">Datenschutz</a></li>
 					<li><a href="#">Impressum</a></li>
-					<li style="content: ''; height: 1em; width: 100%;"></li>
+					<li style="content: ''; height: 2em; width: 100%;"><a style="content: ''; height: 1em; width: 100%;" href="#"></a></li>
 					<li>&#169; Einige Rechte vorbehalten.</li>
 				</ul>
 			</div>
 		</div>
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bordahn-handwerk' ) ); ?>">
-				<?php
+		<!--<div class="site-info">
+			<a href="< ?php echo esc_url( __( 'https://wordpress.org/', 'bordahn-handwerk' ) ); ?>">
+				< ?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Powered by %s', 'bordahn-handwerk' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
-				<?php
+				< ?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bordahn-handwerk' ), 'minima.handwerk', 'MEDIENMANUFAKTUR Schönau' );
 				?>
-		</div><!-- .site-info -->
+		</div>< !-- .site-info -- >-->
+		<div class="site-info">
+			<div class="box"><img src="<?php echo get_template_directory_uri(); ?>/img/mmf_logo.svg"/></div>
+			<div class="box"><span class="sep"> | </span></div>
+			<div class="box"><span>minima.handwerk</span></div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
