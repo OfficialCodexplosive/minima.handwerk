@@ -1,31 +1,36 @@
 var isToggled = false;
-var body = document.querySelector("body.home.blog");
+//var body = document.querySelector("body.home.blog");
+var body = document.querySelector("body");
 var sidebar = document.querySelector(".menu-header-container");
 var toggleBtn = document.querySelector("button.togglebtn");
 var shortLogo = document.querySelector("div.short-logo");
 var nav = document.querySelector("nav#site-navigation.main-navigation");
 var replacementHeader = document.querySelector("div#replacement-header");
 
+var smallDisplayDesiredWidth = "0";
+
 function toggleNav() 
 {
     if(isToggled)
     {
-        sidebar.style.width = "0";
+        smallDisplayDesiredWidth = "0";
         body.style.height = "auto";
-        body.style.overflow = "visible";
+        body.style.overflowY = "visible";
         toggleBtn.classList.remove("active");
         shortLogo.classList.remove("active");
         isToggled = false;
     }else
     {
-        sidebar.style.width = "100%";
+        smallDisplayDesiredWidth = "100%";
         let he = sidebar.offsetHeight + "px";
         body.style.height = he;
-        body.style.overflow = "hidden";
+        body.style.overflowY = "hidden";
         toggleBtn.classList.add("active");
         shortLogo.classList.add("active");
         isToggled = true;
     }
+
+    sidebar.style.width = smallDisplayDesiredWidth;
 }
 
 window.addEventListener('scroll', () => 
@@ -34,7 +39,7 @@ window.addEventListener('scroll', () =>
     var opacity = 1;
     if(window.scrollY > setinTresh)
     {
-        let fadeoutThresh = 400;
+        let fadeoutThresh = 100;
         opacity = 1 - (window.scrollY - setinTresh) / fadeoutThresh;
     }
     if(opacity <= 1 || opacity >= 0)
@@ -50,3 +55,14 @@ window.addEventListener('scroll', () =>
             replacementHeader.classList.remove("show");
     }
 })
+
+window.addEventListener('resize', function() {
+    if(this.window.innerWidth >= 600)
+    {
+        sidebar.style.width = "100%";
+        body.style.height = "auto";
+        body.style.overflowY = "visible";
+    }else{
+        sidebar.style.width = smallDisplayDesiredWidth;
+    }
+}, true);

@@ -80,6 +80,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--color-green-light: #78e08f;
 	--color-green-desaturated: #a8d4b2;
 
+	--filter-green-dark: brightness(0) saturate(100%) invert(11%) sepia(3%) saturate(2636%) hue-rotate(78deg) brightness(93%) contrast(88%);
+
+	--nav-top-margin: 9rem;
+
 	--text-small: 12pt;
 	--text-regular: 16pt;
 	--text-button: var(--text-regular);
@@ -177,6 +181,7 @@ body {
 	background: url("./img/dot-square-pattern-transp-bg.svg"), var(--color-white);
 	background-size: var(--pattern-size);
 	padding: 0 var(--margin-horizontal);
+	overflow-x: hidden;
 }
 
 /**
@@ -663,6 +668,16 @@ textarea {
 	color: var(--color-white);
 }
 
+.main-navigation.dark ul li a 
+{
+	color: var(--color-green-dark) !important;
+}
+
+.main-navigation.dark .short-logo, .main-navigation.dark .togglebtn
+{
+	filter: var(--filter-green-dark);
+}
+
 .main-navigation ul li:nth-of-type(3) {
 	flex: 5;
 	
@@ -676,6 +691,11 @@ textarea {
 	text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.main-navigation.dark ul li:nth-of-type(3)
+{
+	filter: var(--filter-green-dark);
 }
 
 
@@ -758,7 +778,7 @@ textarea {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 .updated:not(.published) {
@@ -1056,7 +1076,7 @@ section#before-after
 	background-repeat: no-repeat;
 	background-size: cover;
 	transform: translateX(calc(-1 * var(--margin-horizontal)));
-	height: calc(100vh + 10%);
+	height: 100%;
 }
 
 #contact .content a
@@ -1412,10 +1432,29 @@ table .counter
 
 #before-after .center .content a, #contact .content .links a
 {
-	
+	position: relative;
 	font-size: var(--text-button);
 	color: var(--color-white);
 	text-underline-offset: .3em;
+}
+
+
+#before-after .center .content a::before, #contact .content .links a::before
+{
+	content: '';
+	background-color: var(--color-white);
+	position: absolute;
+	left: 0;
+	bottom: -.3em;
+	width: 100%;
+	height: 2px;
+	z-index: -1;
+}
+
+#before-after .center .content a:hover::before, #contact .content .links a:hover::before
+{
+	background-color: var(--color-white);
+	height: calc(var(--text-button) +);
 }
 
 #before-after .content a::after, #contact .content .links a::after
@@ -1437,7 +1476,6 @@ footer
 	color: var(--color-white);
 	font-family: "Quicksand";
 	font-size: var(--text-regular);
-	margin-top: -6vh;
 	position: relative;
 	margin-top: -3vh;
 }
@@ -1466,6 +1504,7 @@ footer .scheduler
 .site-footer
 {
 	background-color: var(--color-green-dark);
+	padding: 2em 0;
 }
 
 .page-footer
@@ -1651,6 +1690,88 @@ footer #fullsize-img
 	content: var(--img-house);
 }
 
+.site-default
+{
+	margin-top: var(--nav-top-margin);
+	min-height: 100vh;
+	color: var(--color-green-dark);
+	padding: 0 2em;
+}
+
+.site-default h1
+{
+	text-transform: uppercase;
+	font-size: var(--text-landing);
+	font-family: 'Questrial';
+	text-align: center;
+	font-style: normal;
+}
+
+.site-default h2
+{
+	font-size: var(--text-medium-large);
+	font-family: 'Darker Grotesque';
+	font-weight: 600;
+	padding: 2rem 0;
+	margin: 0;
+}
+
+.site-default h3
+{
+	font-size: var(--text-medium-large);
+	font-family: 'Darker Grotesque';
+	font-weight: 600;
+	padding: 0;
+}
+
+.site-default h1
+{
+	margin: 0;
+}
+
+.site-default .wp-block-columns.imgborder figure.wp-block-image, 
+.site-default .wp-block-columns.imgborder .wp-block-image > figure
+{
+	position: relative;
+}
+
+.site-default .wp-block-columns.imgborder figure.wp-block-image::before, 
+.site-default .wp-block-columns.imgborder .wp-block-image > figure::before
+{
+	position: absolute;
+	top: -2rem;
+	left: -2rem;
+	content: '';
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-color: none;
+	border: 1px solid var(--color-green-dark);
+}
+
+.site-default .wp-block-columns.imgborder figure.wp-block-image, 
+.site-default .wp-block-columns.imgborder div.wp-block-image figure, 
+.site-default .wp-block-columns.imgborder .wp-block-image img
+{
+	width: 100%;
+}
+
+.site-default p
+{
+	line-height: 1.4;
+	font-size: var(--text-regular);
+}
+
+div.custom-wp-forms
+{
+	margin: 0;
+}
+
+div.wpforms-container-full.custom-wp-forms form
+{
+	width: 100%;
+}
+
 @media only screen and (max-width: 600px)
 {
 	:root
@@ -1719,6 +1840,11 @@ footer #fullsize-img
 		margin-left: .5ch;
 	}
 
+	.site-default h1
+	{
+		margin-top: 4rem;
+	}
+
 	.site-header .main-navigation .menu-header-container
 	{
 		height: 100%;
@@ -1731,6 +1857,11 @@ footer #fullsize-img
 		transition: 0.5s;
 		left: 0;
 		padding-top: calc(var(--nav-top-margin) + 25%);
+	}
+
+	#replacement-header, .menu-header-container
+	{
+		overflow-x: hidden;
 	}
 
 	.site-header .main-navigation .menu-header-container, .togglebtn, .short-logo

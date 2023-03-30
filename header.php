@@ -31,14 +31,14 @@
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
+					'menu_id'        => 'primary',
 				)
 			);
 			?>
-			<div class="short-logo">G. BORDAHN</div>
+			<a href="<?php echo site_url(); ?>"><div class="short-logo">G. BORDAHN</div></a>
 			<button class="togglebtn" onclick="toggleNav()"></button>
 		</nav><!-- #site-navigation -->
 		<div id="replacement-header">
-			<a href="#"><span>ZUM<br>TERMIN-<br>PLANER</span></a>
+			<a href="<?php echo get_permalink( get_page_by_path( 'kontakt' ) ) ?>"><span>ZUM<br>KONTAKT-<br>FORMULAR</span></a>
 		</div>
 	</header><!-- #masthead -->

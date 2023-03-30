@@ -30,16 +30,28 @@
 				?>
 			</div>
 			<div class="scheduler">
-				<a href="#"><span>ZUM<br>TERMIN-<br>PLANER</span></a>
+				<a href="<?php echo get_permalink( get_page_by_path( 'kontakt' ) ) ?>"><span>ZUM<br>KONTAKT-<br>FORMULAR</span></a>
 			</div>
 			<div class="legal">
 				<h5>RECHTLICHES</h5>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-3',
+						'menu_id'        => 'legal',
+					)
+				);
+				?>
 				<ul>
+					<li style="content: ''; height: 2em; width: 100%;"><a style="content: ''; height: 1em; width: 100%;" href="#"></a></li>
+					<li>&#169; Einige Rechte vorbehalten.</li>
+				</ul>
+				<!--<ul>
 					<li><a href="#">Datenschutz</a></li>
 					<li><a href="#">Impressum</a></li>
 					<li style="content: ''; height: 2em; width: 100%;"><a style="content: ''; height: 1em; width: 100%;" href="#"></a></li>
 					<li>&#169; Einige Rechte vorbehalten.</li>
-				</ul>
+				</ul>-->
 			</div>
 		</div>
 		<!--<div class="site-info">
@@ -55,11 +67,11 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bordahn-handwerk' ), 'minima.handwerk', 'MEDIENMANUFAKTUR Schönau' );
 				?>
 		</div>< !-- .site-info -- >-->
-		<div class="site-info">
-			<div class="box"><img src="<?php echo get_template_directory_uri(); ?>/img/mmf_logo.svg"/></div>
+		<!--<div class="site-info">
+			<div class="box"><a href="https://schoenau.studio"><img src="<?php echo get_template_directory_uri(); ?>/img/mmf_logo.svg"/></a></div>
 			<div class="box"><span class="sep"> | </span></div>
 			<div class="box"><span>minima.handwerk</span></div>
-		</div>
+		</div>-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

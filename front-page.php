@@ -75,19 +75,19 @@ get_header();
                         <tbody>
                             <tr>
                                 <td>Besichtigung</td>
-                                <td>einfach anrufen oder unseren Online-Terminplaner verwenden und einen Besichtigungstermin ausmachen.</td>
-                                <td><a href="">ZUM KONTAKT</a></td>
+                                <td>einfach anrufen oder unser Kontaktformular verwenden und einen Besichtigungstermin auszumachen und die Einzelheiten der Entrümpelung zu besprechen.</td>
+                                <td><a href="<?php echo get_permalink( get_page_by_path( 'kontakt' ) ) ?>">ZUM KONTAKT</a></td>
                                 
                             </tr>
                             <tr>
                                 <td>Angebot</td>
-                                <td>einfach anrufen oder unseren Online-Terminplaner verwenden und einen Besichtigungstermin ausmachen.</td>
-                                <td><a href="">ZUM KONTAKT</a></td>
+                                <td>wir erstellen Ihnen kurz darauf ein Angebot, das Kosten, Gebühren und Arbeitsstunden für die Entrümpelung enthält.</td>
+                                <td><!--<a href="< ?php echo get_permalink( get_page_by_path( 'kontakt' ) ) ?>">ZUM KONTAKT</a>--></td>
                             </tr>
                             <tr>
                                 <td>Entrümpelung</td>
-                                <td>einfach anrufen oder unseren Online-Terminplaner verwenden und einen Besichtigungstermin ausmachen.</td>
-                                <td><a href="">ZUM KONTAKT</a></td>
+                                <td>wenn Sie mit dem Angebot einverstanden sind, kann die Entrümpelung beginnen!</td>
+                                <td><a href="<?php echo get_permalink( get_page_by_path( 'referenzen' ) ) ?>">ZU DEN REFERENZEN</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -102,7 +102,7 @@ get_header();
                     <h1 class="boldq white">ÜBERZEUGEN SIE SICH<br>SELBST VON UNSERER ARBEIT!</h3>
                 </div>
                 <div class="content">
-                    <a href="#">ZUR BILDERSTRECKE</a>
+                    <a href="<?php echo get_permalink( get_page_by_title( 'referenzen' ) ) ?>">ZUR BILDERSTRECKE</a>
                 </div>
             </div>
         </section>
@@ -117,8 +117,8 @@ get_header();
                     <h2>Kontaktieren Sie uns!</h2>
                     <h4 class="boldq white">+49 221 47-10-4146</h4>
                     <div class="links">
-                        <a href="#">E-MAIL SCHREIBEN</a>
-                        <a href="#">KONTAKTFORMULAR</a>
+                        <a href="mailto:___@___.de">E-MAIL SCHREIBEN</a>
+                        <a href="<?php echo get_permalink( get_page_by_path( 'kontakt' ) ) ?>">KONTAKTFORMULAR</a>
                     </div>
                 </div>
             </div>
