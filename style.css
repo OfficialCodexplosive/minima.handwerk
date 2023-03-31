@@ -1833,6 +1833,15 @@ footer #fullsize-img
 	padding: 0;
 }
 
+.site-default h4
+{
+	font-size: var(--text-medium);
+	font-family: 'Darker Grotesque';
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+}
+
 .site-default h1
 {
 	margin: 0;
